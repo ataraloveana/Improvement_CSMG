@@ -274,42 +274,31 @@ if page == "🏠 Dashboard":
     if st.session_state.get("result_df") is not None:
         result_count = len(st.session_state.result_df)
 
+    # ========================================================
+    # DASHBOARD METRICS
+    # ========================================================
+
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        st.markdown(
-            f"""
-            <div class="amras-card">
-                <div class="amras-card-title">🗂️ Master Data</div>
-                <div class="amras-card-value">{master_count:,}</div>
-                <div class="amras-card-description">Total data master</div>
-            </div>
-            """,
-            unsafe_allow_html=True,
+
+        st.metric(
+            label="🗂️ Master Data",
+            value=f"{master_count:,}",
         )
 
     with col2:
-        st.markdown(
-            f"""
-            <div class="amras-card">
-                <div class="amras-card-title">👤 Customer Baru</div>
-                <div class="amras-card-value">{customer_count:,}</div>
-                <div class="amras-card-description">Data pelanggan baru</div>
-            </div>
-            """,
-            unsafe_allow_html=True,
+
+        st.metric(
+            label="👤 Customer Baru",
+            value=f"{customer_count:,}",
         )
 
     with col3:
-        st.markdown(
-            f"""
-            <div class="amras-card">
-                <div class="amras-card-title">⚙️ Hasil Processing</div>
-                <div class="amras-card-value">{result_count:,}</div>
-                <div class="amras-card-description">Data berhasil diproses</div>
-            </div>
-            """,
-            unsafe_allow_html=True,
+
+        st.metric(
+            label="⚙️ Hasil Processing",
+            value=f"{result_count:,}",
         )
 
     st.divider()
