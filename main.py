@@ -114,7 +114,7 @@ st.markdown(
 # ============================================================
 
 if "current_page" not in st.session_state:
-    st.session_state.current_page = "🏠 Dashboard"
+    st.session_state.current_page = "🏠 Home"
 
 if "master_df" not in st.session_state:
     st.session_state.master_df = None
@@ -220,7 +220,7 @@ with st.sidebar:
     st.header("☄️MARS")
 
     menu_options = [
-        "🏠 Dashboard",
+        "🏠 Home",
         "🗃️ Data Upload & Processing",
         "📋 Result",
     ]
@@ -239,9 +239,9 @@ with st.sidebar:
 # DASHBOARD
 # ============================================================
 
-if page == "🏠 Dashboard":
+if page == "🏠 Home":
 
-    st.subheader("Dashboard")
+    st.subheader("Home")
 
     master_rows = (
         len(st.session_state.master_df)
