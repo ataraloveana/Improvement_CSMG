@@ -240,9 +240,7 @@ with st.sidebar:
 # ============================================================
 
 if page == "🏠 Home":
-
-    st.subheader("Home")
-
+    
     master_rows = (
         len(st.session_state.master_df)
         if st.session_state.master_df is not None
