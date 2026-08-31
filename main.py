@@ -33,6 +33,10 @@ st.markdown(
     """
     <style>
 
+    /* ========================================================
+       MAIN TITLE
+       ======================================================== */
+
     .main-title {
         font-size: 32px;
         font-weight: 700;
@@ -45,48 +49,65 @@ st.markdown(
         margin-bottom: 25px;
     }
 
-    .section-title {
-        font-size: 21px;
-        font-weight: 600;
-        margin-top: 15px;
-        margin-bottom: 10px;
-    }
 
+    /* ========================================================
+       DASHBOARD CARD
+       Tanpa background dan tanpa border
+       ======================================================== */
 
-    .amras-card {
-        background-color: #1f2937;
-        border: 1px solid #374151;
-        border-radius: 14px;
-        padding: 24px;
+    .mars-card {
+        background-color: transparent;
+        border: none;
+        border-radius: 0px;
+        padding: 10px 5px 20px 5px;
         min-height: 130px;
         margin-bottom: 20px;
     }
 
-    .amras-card-title {
+    .mars-card-title {
         font-size: 16px;
         font-weight: 600;
-        color: #d1d5db;
         margin-bottom: 12px;
     }
 
-    .amras-card-value {
+    .mars-card-value {
         font-size: 32px;
         font-weight: 700;
-        color: #ffffff;
         line-height: 1.2;
     }
 
-    .amras-card-description {
+    .mars-card-description {
         font-size: 13px;
-        color: #9ca3af;
+        color: #6b7280;
         margin-top: 8px;
     }
+
+
+    /* ========================================================
+       DATAFRAME
+       Hilangkan border tambahan
+       ======================================================== */
+
+    [data-testid="stDataFrame"] {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+
+    /* ========================================================
+       EXPANDER
+       ======================================================== */
+
+    [data-testid="stExpander"] {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
 
     </style>
     """,
     unsafe_allow_html=True,
 )
-
 
 # ============================================================
 # SESSION STATE
